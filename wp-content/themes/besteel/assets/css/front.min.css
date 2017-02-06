@@ -192,7 +192,7 @@ html {
     line-height: 1.35em
 }
 .content a {
-    color: #0d91aa;
+    color: #003565;
     text-decoration: none
 }
 .content a:hover {
@@ -340,7 +340,7 @@ html {
 }
 .icon-border {
     padding: .2em .25em .15em;
-    border: .08em solid #eee;
+    border: .08em solid #CECECE;
     border-radius: .1em
 }
 .icon-pull-left {
@@ -2911,7 +2911,7 @@ body .wpml-ls-legacy-dropdown {
 }
 .mainNav__link {
     color: #333;
-    padding: 22px;
+    padding: 19px;
     font-size: 17px;
     -moz-transition: color .2s ease-out;
     -o-transition: color .2s ease-out;
@@ -2920,7 +2920,7 @@ body .wpml-ls-legacy-dropdown {
 }
 .mainNav__link--current {
     font-weight: 700;
-    color: #0d91aa
+    color: #003565
 }
 .mainNav__link--current:after {
     content: '';
@@ -2929,10 +2929,10 @@ body .wpml-ls-legacy-dropdown {
     left: 22px;
     right: 22px;
     height: 2px;
-    background-color: #0d91aa
+    background-color: #003565
 }
 .mainNav__link:hover {
-    color: #0d91aa
+    color: #003565
 }
 .bigCta,
 .mainNav__sLink {
@@ -2999,11 +2999,11 @@ body .wpml-ls-legacy-dropdown {
 }
 .bigCtaContainer:before {
     right: 100%;
-    background-color: #0d91aa
+    background-color: #003565
 }
 .bigCtaContainer:after {
     left: 100%;
-    background-color: #eee
+    background-color: #CECECE
 }
 .bigCta {
     width: 33.3333%;
@@ -3023,13 +3023,13 @@ body .wpml-ls-legacy-dropdown {
     left: 0
 }
 .bigCta:nth-child(1) {
-    background-color: #0d91aa
-}
-.bigCta:nth-child(2) {
     background-color: #003565
 }
+.bigCta:nth-child(2) {
+    background-color: #005DB1
+}
 .bigCta:nth-child(3) {
-    background-color: #eee;
+    background-color: #CECECE;
     color: #373737
 }
 .bigCta__title {
@@ -3189,7 +3189,7 @@ body .wpml-ls-legacy-dropdown {
     margin-top: 20px
 }
 .btn {
-    background-color: #0d91aa;
+    background-color: #003565;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -3326,7 +3326,7 @@ body .wpml-ls-legacy-dropdown {
     opacity: 0
 }
 .homeFeature {
-    background-color: #0d91aa;
+    background-color: #003565;
     padding: 55px 0 65px
 }
 .homeFeature__content {
@@ -3403,7 +3403,7 @@ body .wpml-ls-legacy-dropdown {
     margin-right: 0
 }
 .infoContact {
-    background-color: #0d91aa;
+    background-color: #005DB1;
     padding: 100px
 }
 .infoContact .wrapper:after {
@@ -3440,7 +3440,6 @@ body .wpml-ls-legacy-dropdown {
 .infoContact__link {
     bottom: 0;
     text-indent: -9999px;
-    background: url(../img/logo-besteel4.jpg) no-repeat
 }
 .footer {
     background-color: #3c3c3c;
@@ -3583,7 +3582,7 @@ body .wpml-ls-legacy-dropdown {
     font-weight: 700
 }
 .field__input {
-    border: 1px solid #0d91aa;
+    border: 1px solid #003565;
     font-size: 16px;
     margin-top: 6px;
     width: 100%;
@@ -3601,7 +3600,7 @@ body .wpml-ls-legacy-dropdown {
     font-weight: 700
 }
 .textarea__input {
-    border: 1px solid #0d91aa;
+    border: 1px solid #003565;
     margin-top: 6px;
     width: 100%;
     min-height: 215px;
@@ -3630,7 +3629,7 @@ body .wpml-ls-legacy-dropdown {
 }
 .photoText {
     padding: 80px 0;
-    background-color: #eee
+    background-color: #CECECE
 }
 .photoText__image {
     float: left;
@@ -3698,7 +3697,7 @@ body .wpml-ls-legacy-dropdown {
 }
 .quote__text:before {
     content: '';
-    background-color: #0d91aa;
+    background-color: #003565;
     position: absolute;
     left: 0;
     width: 3px;
@@ -3710,7 +3709,7 @@ body .wpml-ls-legacy-dropdown {
     position: relative
 }
 .gallery {
-    background-color: #0d91aa;
+    background-color: #003565;
     padding: 60px 0
 }
 .gallery__list {
