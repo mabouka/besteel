@@ -1,0 +1,71 @@
+.footer{
+    background-color: $cGrey6;
+    color: #FFF;
+    line-height: 1.3em;
+    a{
+        color: #FFF;
+        text-decoration: none;
+        &:hover, &:focus{
+            text-decoration: underline;
+        }
+    }
+    padding: 40px gutter(12) 100px gutter(12);
+    &__content{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include clearfix();
+    }
+}
+
+.navFooter{
+    width: col(6, 12);
+    float: left;
+    @include clearfix();
+
+    &__title, h3{
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    &__item{
+        &:before{
+            content: '- ';
+        }
+    }
+
+    &__main, &__product{
+        width: col(3, 6);
+        float: left;
+    }
+
+    &__main{
+        margin-right: gutter(6);
+    }
+}
+
+.navInfos{
+    width: col(6, 12);
+    float: right;
+    @include clearfix();
+
+    &__title{
+        width: 100%;
+        float: left;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 12px;
+
+    }
+
+    &__address{
+        width: col(3, 6);
+        float: left;
+    }
+
+    &__contact{
+        width: col(3, 6);
+        float: right;
+    }
+}

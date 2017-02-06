@@ -1,0 +1,51 @@
+.infoContact{
+    background-color: $cBlueGrey;
+    padding: 100px;
+
+    .wrapper{
+        @include clearfix();
+    }
+
+    &__item{
+        width: col(3,12);
+        float: left;
+        text-align: center;
+        padding-top: 70px;
+        position: relative;
+        color: #FFF;
+
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+
+    }
+
+    &__icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 55px;
+
+    }
+
+    &__content{
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    &__link{
+        @include cover();
+        text-indent: -9999px;
+        @include clickableTransparentBg();
+    }
+
+
+}

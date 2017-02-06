@@ -1,0 +1,57 @@
+.header{
+//     height: 112px;
+    @include box-shadow(2px 3px 2px 0px rgba(0, 0, 0, 0.35));
+    position: relative;
+    z-index: 100;
+    .wrapper{
+        height: 100%;
+        position: relative;
+        &:before{
+            content: '';
+            vertical-align: middle;
+            display: inline-block;
+            width: 0;
+            height: 100%;
+        }
+    }
+
+    &__phone{
+        position: absolute;
+        top: 0;
+        right: colGut(2.5,0,12,0);
+        line-height: 45px;
+        text-decoration: none;
+        color: $cGrey1;
+
+        .icon-phone{
+            vertical-align: middle;
+            margin-right: 8px;
+
+        }
+    }
+}
+
+.headerLogo{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: col(4,12);
+    position: relative;
+    height: 130px;
+    &__img{
+        width: 100%;
+        height: auto;
+    }
+    &__heading{
+        @include hidden();
+    }
+    &__link{
+        @include cover();
+        text-indent: -9999px;
+        @include clickableTransparentBg();
+    }
+}
+
+body .wpml-ls-legacy-dropdown {
+	width: inherit;
+}

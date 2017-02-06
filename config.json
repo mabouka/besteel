@@ -1,0 +1,92 @@
+{
+
+	"tasks" : {
+		"default": [
+			"build:assets",
+			"build:css",
+			"build:js",
+			"watch"
+		],
+		"clean": [
+			"clean:assets",
+			"clean:css",
+			"clean:js"
+		],
+		"build": [
+			"build:assets",
+			"build:css",
+			"build:js"
+		],
+		"watch": [
+			"watch:assets",
+			"watch:css",
+			"watch:js"
+		]
+	},
+
+	"assets": {
+		"files": [
+			{
+				"src": ["wp-content/themes/besteel/sources/img/**/*","!wp-content/themes/besteel/sources/assets/**/*.db"],
+				"dist": "wp-content/themes/besteel/assets/img"
+			}
+		],
+		"options": {
+			"imagemin": {
+				"optimizationLevel": 3,
+				"progressive": true,
+				"interlaced": true
+			}
+		},
+		"watch": [
+			"wp-content/themes/besteel/sources/assets/img/**",
+			"wp-content/themes/besteel/sources/assets/font/**"
+		]
+	},
+
+	"scripts": {
+		"files": [
+			{
+				"src": [
+					"wp-content/themes/besteel/sources/js/vendor/zoombox.js",
+					"wp-content/themes/besteel/sources/js/vendor/slick.min.js",
+					"wp-content/themes/besteel/sources/js/front.js",
+					"wp-content/themes/besteel/sources/js/class/**/*.js"
+				],
+				"dist": "wp-content/themes/besteel/assets/js/",
+				"filename": "b.js",
+				"minfilename": "b.min.js"
+	            }
+		],
+		"options": {
+			"jshint": {
+				"lookup" : true
+			},
+			"uglify": {}
+		},
+		"watch": [
+			"wp-content/themes/besteel/sources/js/**/*.js"
+		]
+	},
+
+	"styles": {
+		"files": [
+			{
+				"src": "wp-content/themes/besteel/sources/scss/front.scss",
+				"dist": "wp-content/themes/besteel/assets/css/",
+				"filename": "front.min.css"
+			}
+		],
+		"options": {
+			"scss": {
+				"css": "wp-content/themes/besteel/assets/css",
+				"sass": "wp-content/themes/besteel/sources/scss",
+				"image": "wp-content/themes/besteel",
+			  	"style": "expanded"
+			}
+		},
+		"watch": [
+			"wp-content/themes/besteel/sources/scss/**/*.scss"
+		]
+	}
+}

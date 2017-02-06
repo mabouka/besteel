@@ -1,0 +1,13 @@
+.addressContact{
+    background-color: $cBlue;
+    padding: 80px;
+    color: #FFF;
+    text-align: center;
+    line-height: 1.3em;
+
+    &__name{
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+}

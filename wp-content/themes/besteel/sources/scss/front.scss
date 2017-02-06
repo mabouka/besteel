@@ -1,0 +1,35 @@
+@import "compass";
+
+@import "var/colors";
+@import "var/gridz";
+@import "var/icons";
+@import "var/typo";
+
+@import "mixins/gridz";
+@import "mixins/icons";
+@import "mixins/utils";
+
+@import "base/reset";
+@import "base/base";
+
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/zoombox/zoombox";
+@import "vendor/slick/slick";
+
+@import "pages/home";
+
+@import "parts/header";
+@import "parts/mainNav";
+@import "parts/hSlider";
+@import "parts/bigCta";
+@import "parts/hAbout";
+@import "parts/btn";
+@import "parts/hSlider";
+@import "parts/hFeatures";
+@import "parts/infoContact";
+@import "parts/footer";
+@import "parts/contactForm";
+@import "parts/addressContact";
+@import "parts/photoText";
+@import "parts/quote";
+@import "parts/gallery";

@@ -1,0 +1,156 @@
+
+.bigCtaContainer{
+    display: table;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 300%;
+        background-color: $cBlueGrey;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 300%;
+        background-color: $cGrey2;
+    }
+}
+
+.bigCta{
+    width: 33.3333%;
+    display:table-cell;
+    padding: 120px 32px 160px 32px;
+    text-align: center;
+    color: #FFF;
+    position: relative;
+
+    &:nth-child(1){
+        background-color: $cBlueGrey;
+    }
+    &:nth-child(2){
+        background-color: $cBlue;
+    }
+    &:nth-child(3){
+        background-color: $cGrey2;
+        color: $cGrey3;
+    }
+
+    &__title{
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    &__text{
+        font-size: 17px;
+        line-height: 1.3em;
+    }
+
+    &__link{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    &__center{
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+
+    }
+
+    &__label{
+        font-size: 17px;
+        border: 2px solid #FFF;
+        line-height: 45px;
+        padding: 0 25px 0 25px+45px ;
+        display: inline-block;
+        color: #FFF;
+        position: relative;
+        @include transition(200ms border-color ease-in, 200ms color ease-in);
+
+
+
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #fff;
+            width: 50px;
+            @include transition(200ms background-color ease-in);
+        }
+
+        &:after{
+            content: $fa-var-plus;
+            @include fa-icon();
+            color: #000;
+            position: absolute;
+            top:50%;
+            margin-top: -0.5em;
+            left: 0;
+            width: 50px;
+            @include transition( 200ms transform ease-in);
+            @include transform( rotate3d(0,0,1,00deg));
+            transform-origin: 50% 50%;
+
+        }
+
+        .bigCta:nth-child(3) &{
+                border: 2px solid $cGrey4;
+                color: $cGrey4;
+
+                &:before{
+                    background-color: #000;
+                }
+
+                &:after{
+                    color: #FFF;
+
+                }
+        }
+        .bigCta__link:hover &,
+        .bigCta__link:focus &{
+            color: lighten($cBlueGrey, 50%);
+            border: 2px solid lighten($cBlueGrey, 50%);
+
+            &:before{
+                background-color: lighten($cBlueGrey, 50%);
+            }
+
+            &:after{
+                @include transform( rotate(90deg));
+            }
+
+        }
+
+        .bigCta:nth-child(3):hover &,
+        .bigCta:nth-child(3):focus &{
+
+                color: $cBlue;
+                border: 2px solid $cBlue;
+
+                &:before{
+                    background-color: $cBlue;
+                }
+        }
+    }
+
+
+}

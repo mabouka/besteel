@@ -1,0 +1,98 @@
+.mainNav{
+    float: right;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 50px;
+
+    &__item{
+        display: inline-block;
+        &--hasChilds{
+            position: relative;
+
+            .mainNav__link:after{
+                padding-left: 8px;
+                @include fa-icon();
+                content: $fa-var-caret-down;
+            }
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $cGrey0;
+        padding: 22px;
+        display: inline-block;
+        font-size: 17px;
+        position: relative;
+        @include transition( 200ms color ease-out);
+
+        &--current{
+            font-weight: 700;
+            color: $cBlueGrey;
+
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 16px;
+                left: 22px;
+                right: 22px;
+                height: 2px;
+                background-color: $cBlueGrey;
+            }
+        }
+
+        &:hover{
+            color: $cBlueGrey;
+        }
+    }
+
+    &__childs{
+        background-color: $cBlue;
+        position: absolute;
+        top: 100%;
+
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(visibility 0s linear 300ms, opacity 300ms);
+
+    }
+    &__link:hover + &__childs,
+    &__childs:hover,
+    &__item--active &__childs{
+        opacity: 1;
+        visibility: visible;
+        @include transition(visibility 0s linear 0s, opacity 300ms);
+    }
+
+    &__sItem{
+        display: block;
+        &+&{
+            border-top: 1px solid lighten($cBlue, 5%);
+        }
+
+        &:hover{
+            background-color: darken($cBlue, 3%);
+        }
+    }
+
+    &__sLink{
+        display: block;
+        padding: 15px 10px ;
+        text-decoration: none;
+        color: #FFF;
+        text-align: center;
+    }
+}
+
+
+.langNav {
+    position: absolute;
+    top: 0;
+    right: 8.51064%;
+    line-height: 45px;
+    & a {
+        text-decoration: none;
+    }
+}

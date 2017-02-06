@@ -1,0 +1,104 @@
+.hSlider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+
+    &__item{
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .wrapper{
+
+    }
+
+    &__prev, &__next{
+        z-index: 1000;
+        position: absolute;
+        top: 50%;
+        text-indent: -9999px;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        background-color: #fff;
+        color: $cBlue;
+        overflow: hidden;
+
+        &:before, &:after{
+            @include fa-icon();
+            position: absolute;
+            top: 50%;
+            margin-top: -0.5em;
+            left: 0;
+            right: 0;
+            text-align: center;
+            text-indent: 0;
+            @include transition( 200ms transform ease-out, 200ms opacity ease-out)
+
+        }
+    }
+
+    &__prev{
+        left: 50px;
+        &:before, &:after{
+            content: $fa-var-arrow-left;
+        }
+
+        &:before{
+            @include transform( translate3d(100%, 0,0));
+            opacity: 0;
+        }
+
+        &:after{
+            @include transform( translate3d(0, 0,0));
+            opacity: 1;
+        }
+
+        &:hover, &:focus{
+            &:before{
+                @include transform( translate3d(0, 0,0));
+                opacity: 1;
+            }
+
+            &:after{
+                @include transform( translate3d(-100%, 0,0));
+                opacity: 0;
+            }
+        }
+    }
+
+    &__next{
+        right: 50px;
+        &:before, &:after{
+            content: $fa-var-arrow-right;
+        }
+
+        &:before{
+            @include transform( translate3d(-100%, 0,0));
+            opacity: 0;
+        }
+
+        &:after{
+            @include transform( translate3d(0,0,0));
+            opacity: 1;
+        }
+
+        &:hover, &:focus{
+            &:before{
+                @include transform( translate3d(0,0,0));
+                opacity: 1;
+            }
+
+            &:after{
+                @include transform( translate3d(100%, 0,0));
+                opacity: 0;
+            }
+        }
+    }
+}
